@@ -10,4 +10,5 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     with:
       channel_id: pr-${{ github.event.number }}
-      firebase_service_account: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRAXIO_APP }}
+    secrets:
+      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRAXIO_APP }}
