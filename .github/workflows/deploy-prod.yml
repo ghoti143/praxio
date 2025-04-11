@@ -6,7 +6,17 @@ on:
       - main
 
 jobs:
-  call-deploy-workflow:
+  build:
     uses: ./.github/workflows/deploy.yml
-    with:
-      channel_id: live
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRAXIO_APP }}"
+          channelId: live
+          projectId: praxio-app
