@@ -5,47 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Praxio - Coming Soon</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <div class="min-h-screen flex flex-col items-center justify-center px-4">
-    <div class="text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Praxio</h1>
-      <p class="text-xl mb-8">A new way to practice, build, and grow. Launching soon!</p>
+<body class="bg-gray-100 text-gray-800">
 
-      <!-- Fake screenshots -->
-      <div class="flex flex-wrap justify-center gap-4 mb-8">
-        <div class="w-64 h-128 bg-gray-200 flex items-center justify-center">Screenshot 1</div>
-        <div class="w-64 h-128 bg-gray-200 flex items-center justify-center">Screenshot 2</div>
-        <div class="w-64 h-128 bg-gray-200 flex items-center justify-center">Screenshot 3</div>
-      </div>
+  <div class="max-w-4xl mx-auto p-8 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">Praxio</h1>
+    <p class="text-xl mb-8">A better way to build habits. 💪</p>
 
-      <!-- Email signup form -->
-      <form class="mb-8" action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="email" name="email" required placeholder="Enter your email"
-          class="px-4 py-2 border rounded-l-md focus:outline-none">
-        <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700">
-          Notify Me
-        </button>
-      </form>
-
-      <!-- App store badges -->
-      <div class="flex flex-wrap justify-center gap-4 mb-8">
-        <a href="#" target="_blank">
-          <img src="https://developer.apple.com/news/images/download-on-the-app-store-badge.png" alt="Download on the App Store" class="h-12">
-        </a>
-        <a href="#" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12">
-        </a>
-      </div>
-
-      <!-- GitHub link -->
-      <p class="mb-4">
-        <a href="https://github.com/ghoti143/praxio" target="_blank" class="text-blue-600 hover:underline">
-          See how we’re building Praxio in public on GitHub 🚀
-        </a>
-      </p>
-
+    <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
+      <img src="/images/screenshot1.png" alt="App Screenshot 1" class="rounded-xl shadow-md w-64">
+      <img src="/images/screenshot2.png" alt="App Screenshot 2" class="rounded-xl shadow-md w-64">
+      <img src="/images/screenshot3.png" alt="App Screenshot 3" class="rounded-xl shadow-md w-64">
     </div>
+
+    <form action="https://your-email-list.com/subscribe" method="POST" class="mb-8">
+      <input type="email" name="email" placeholder="Enter your email" required class="p-3 rounded-l-md border border-gray-300 w-64">
+      <button type="submit" class="p-3 bg-blue-600 text-white rounded-r-md hover:bg-blue-700">Notify Me</button>
+    </form>
+
+    <div class="flex justify-center items-center gap-4 mb-8">
+      <a href="https://www.apple.com/app-store/" target="_blank">
+        <img src="https://developer.apple.com/news/images/download-on-the-app-store-badge.png" alt="Download on the App Store" class="h-12">
+      </a>
+      <a href="https://play.google.com/store" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12">
+      </a>
+    </div>
+
+    <div class="flex justify-center items-center gap-6 text-lg">
+      <a href="/blog" class="text-blue-600 hover:underline">Read our Blog</a>
+      <a href="https://github.com/ghoti143/praxio" target="_blank" class="flex items-center text-gray-700 hover:text-black">
+        <i data-feather="github" class="w-5 h-5 mr-2"></i> GitHub
+      </a>
+    </div>
+
+    <p class="mt-10 text-gray-500">We are building in public. Come help us shape Praxio!</p>
   </div>
+
+  <script>
+    feather.replace()
+  </script>
 </body>
 </html>
