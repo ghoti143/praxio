@@ -1,4 +1,4 @@
-name: Deploy landing page and blog to Firebase live channel on merge
+name: Deploy website to Firebase live channel on merge
 
 on:
   push:
