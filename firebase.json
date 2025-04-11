@@ -1,20 +1,12 @@
 {
-  "hosting": [
-    {
-      "target": "landing",
-      "public": "landing",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-      "rewrites": [
-        {
-          "source": "/blog/**",
-          "destination": "/blog/index.html"
-        }
-      ]
-    },
-    {
-      "target": "blog",
-      "public": "blog/public",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-    }
-  ]
+  "hosting": {
+    "public": "landing",
+    "rewrites": [
+      {
+        "source": "/blog/**",
+        "destination": "/blog/index.html"
+      }
+    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
 }
