@@ -1,0 +1,4 @@
+baseURL = 'https://praxio.app/blog/'
+languageCode = 'en-us'
+title = 'Praxio Development Notes'
+theme = 'dario'
