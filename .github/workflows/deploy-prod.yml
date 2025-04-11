@@ -1,0 +1,12 @@
+name: Deploy landing page and blog to Firebase live channel on merge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-deploy-workflow:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      channel_id: live

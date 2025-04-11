@@ -1,9 +1,7 @@
-name: Deploy Hugo Blog to Firebase Hosting on merge
+name: Build and Deploy Landing + Blog
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
 
 jobs:
   build_and_deploy:
@@ -24,29 +22,18 @@ jobs:
       - name: Prepare files for deployment
         run: |
           # Create the directory where we'll merge the blog and landing build
-          mkdir -p firebase-public/blog
+          mkdir -p build/public/blog
 
           # Copy landing page files (Assumes landing page is already ready in the landing folder)
-          cp -r landing/* firebase-public/
+          cp -r landing/* build/public/
 
           # Copy blog files to the /blog path
-          cp -r blog/public/* firebase-public/blog/
-
-      - name: Prepare files for deployment
-        run: |
-          # Create the directory where we'll merge the blog and landing build
-          mkdir -p firebase-public/blog
-
-          # Copy landing page files (Assumes landing page is already ready in the landing folder)
-          cp -r landing/* firebase-public/
-
-          # Copy blog files to the /blog path
-          cp -r blog/public/* firebase-public/blog/
+          cp -r blog/public/* build/public/blog/
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRAXIO_APP }}"
-          channelId: live
+          channelId: ${{ inputs.channel_id }}
           projectId: praxio-app
