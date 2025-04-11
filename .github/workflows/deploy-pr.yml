@@ -1,4 +1,4 @@
-name: Deploy landing page and blog to Firebase live channel on pull request
+name: Deploy website to Firebase live channel on PR
 
 on:
   pull_request:
