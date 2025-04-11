@@ -1,7 +1,14 @@
 name: Build and Prepare Landing + Blog
 
 on:
-  workflow_call:  
+  workflow_call:
+    inputs:
+      channel_id:
+        required: true
+        type: string
+      firebase_service_account:
+        required: true
+        type: string
 
 jobs:
   build_and_prepare:
@@ -29,3 +36,11 @@ jobs:
 
           # Copy blog files to the /blog path
           cp -r blog/public/* build/public/blog/
+        
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ inputs.firebase_service_account }}"
+          channelId: "${{ inputs.channel_id }}"
+          projectId: praxio-app
