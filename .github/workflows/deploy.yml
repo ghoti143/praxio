@@ -6,9 +6,6 @@ on:
       channel_id:
         required: true
         type: string
-      firebase_service_account:
-        required: true
-        type: string
 
 jobs:
   build_and_prepare:
