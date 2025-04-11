@@ -1,4 +1,4 @@
-name: Build and Prepare Landing + Blog
+name: Build and Deploy Landing + Blog
 
 on:
   workflow_call:
@@ -11,7 +11,7 @@ on:
         required: true
 
 jobs:
-  build_and_prepare:
+  build_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
