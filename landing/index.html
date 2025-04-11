@@ -7,23 +7,47 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-  <div class="max-w-4xl mx-auto p-8 text-center">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">Praxio</h1>
-    <p class="text-xl mb-8">A better way to build habits. 💪</p>
+  <!-- Header -->
+  <header class="bg-white shadow p-6 flex justify-between items-center">
+    <h1 class="text-3xl font-bold text-indigo-600">Praxio</h1>
+    <a href="https://github.com/ghoti143/praxio" target="_blank" class="text-indigo-500 hover:underline text-sm">
+      GitHub
+    </a>
+  </header>
 
-    <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
-      <img src="/images/screenshot1.png" alt="App Screenshot 1" class="rounded-xl shadow-md w-64">
-      <img src="/images/screenshot2.png" alt="App Screenshot 2" class="rounded-xl shadow-md w-64">
-      <img src="/images/screenshot3.png" alt="App Screenshot 3" class="rounded-xl shadow-md w-64">
+  <!-- Hero Section -->
+  <section class="flex-1 flex flex-col items-center justify-center p-8 text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Building in Public 🚀</h2>
+    <p class="text-lg text-gray-600 mb-8">
+      We're building Praxio — a smarter way to manage your workflow. Join us early!
+    </p>
+
+    <!-- Fake screenshots -->
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <div class="w-60 h-40 bg-gray-300 rounded shadow-inner flex items-center justify-center">
+        <span class="text-gray-500">Screenshot 1</span>
+      </div>
+      <div class="w-60 h-40 bg-gray-300 rounded shadow-inner flex items-center justify-center">
+        <span class="text-gray-500">Screenshot 2</span>
+      </div>
+      <div class="w-60 h-40 bg-gray-300 rounded shadow-inner flex items-center justify-center">
+        <span class="text-gray-500">Screenshot 3</span>
+      </div>
     </div>
 
-    <form action="https://your-email-list.com/subscribe" method="POST" class="mb-8">
-      <input type="email" name="email" placeholder="Enter your email" required class="p-3 rounded-l-md border border-gray-300 w-64">
-      <button type="submit" class="p-3 bg-blue-600 text-white rounded-r-md hover:bg-blue-700">Notify Me</button>
+    <!-- Email signup form -->
+    <form action="#" method="POST" class="w-full max-w-md bg-white p-6 rounded shadow">
+      <h3 class="text-2xl font-semibold mb-4">Get Notified</h3>
+      <input type="email" name="email" placeholder="Your email address" required
+             class="w-full p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+      <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white p-3 rounded font-semibold">
+        Notify Me
+      </button>
     </form>
 
+    <!-- App store badges -->
     <div class="flex justify-center items-center gap-4 mb-8">
       <a href="https://www.apple.com/app-store/" target="_blank">
         <img src="https://developer.apple.com/news/images/download-on-the-app-store-badge.png" alt="Download on the App Store" class="h-12">
@@ -33,6 +57,7 @@
       </a>
     </div>
 
+
     <div class="flex justify-center items-center gap-6 text-lg">
       <a href="/blog" class="text-blue-600 hover:underline">Read our Blog</a>
       <a href="https://github.com/ghoti143/praxio" target="_blank" class="flex items-center text-gray-700 hover:text-black">
@@ -41,10 +66,17 @@
     </div>
 
     <p class="mt-10 text-gray-500">We are building in public. Come help us shape Praxio!</p>
-  </div>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-400 text-xs p-4">
+    © 2025 Praxio. All rights reserved.
+  </footer>
 
   <script>
     feather.replace()
   </script>
+
 </body>
 </html>
