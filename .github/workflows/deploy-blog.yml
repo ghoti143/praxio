@@ -19,9 +19,7 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build Hugo site
-        run: |
-          cd blog
-          hugo --minify
+        run: cd blog && hugo --minify
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
@@ -30,4 +28,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRAXIO_APP }}'
           channelId: live
           projectId: praxio-app
-          entryPoint: ./blog  # <<-- Tell it that firebase.json is inside /blog
+          targets: landing,blog
