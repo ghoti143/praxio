@@ -1,0 +1,14 @@
+name: Deploy website to Firebase live channel on PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    uses: ./.github/workflows/build-and-deploy-common.yml
+    with:
+      channel_id: pr-${{ github.event.number }}
+    secrets:
+      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRAXIO_APP }}

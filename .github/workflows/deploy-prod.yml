@@ -1,0 +1,14 @@
+name: Deploy website to Firebase live channel on merge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    uses: ./.github/workflows/build-and-deploy-common.yml
+    with:
+      channel_id: live
+    secrets:
+      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRAXIO_APP }}

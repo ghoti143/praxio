@@ -3,8 +3,6 @@ date = '2025-04-11T10:15:59-04:00'
 title = 'Hello World'
 +++
 
-# Hello World
-
 I've been thinking about creating an app for a while. Why? Mostly for practice and to sharpen my skills. I've recently been able to work on a Flutter app and it's pretty enjoyable. Also, I'd like to learn the ecosystem of app development and deployment.
 
 Since I've been trying to build better daily habits recently, I thought building a habit tracker app would be a good option. Since the beginning of the year, I've been using a Google Sheet to track my daily habits. This will be a level up. I know there's a lot of habit tracking apps on the market; I'm not trying to get rich. But maybe this one will eventually have some secret sauce which will make it outshine the rest?
@@ -16,3 +14,5 @@ Why am I using AI? Well, for one, it seems like vibe coding is the future. Whate
 One other thing to note: I'll be developing this app 100% in the open. The [GitHub repo](https://github.com/ghoti143/praxio) is open source. The roadmap will be open. I'll publicly post on this blog as I make progress. The open source nature of this project will hopefully attract some real image-bearers to join in the process. Working 100% with AI can be dehumanizing. Hopefully if others get interested in this project, we could score a point for team human.
 
 p.s. I've made a rule to only hand write these blog posts. This will be the area of the project which is off limits to the machine.
+
+p.p.s. Google just released [Firebase Studio](https://firebase.blog/posts/2025/04/introducing-firebase-studio/) 2 days ago. I'm using it now. Pretty nice so far. It's built on VS Code and has a Gemini chat window. Instead of remembering how to enable `formatOnSave`, I just said, "enable format on save" and Gemini found the settings.json file and did the thing. I could get used to this (famous last words).

@@ -57,7 +57,6 @@ html.js-loaded {
 
 header h1 a {
   display: block;
-  width: 140px;
   font-family: Newsreader, serif;
 }
 
@@ -79,12 +78,13 @@ header h1 a {
   --code-bg: rgb(55, 56, 62);
   --hljs-bg: rgb(46, 46, 51);
 }
+
 /* Dark Mode Init - No Animation */
 .dark-mode-init .toggle-slider {
   transition: none !important;
 }
 
-.dark-mode-init .toggle-input:checked + .toggle-label .toggle-slider {
+.dark-mode-init .toggle-input:checked+.toggle-label .toggle-slider {
   transform: translateX(20px);
 }
 
@@ -92,11 +92,11 @@ header h1 a {
   transition: transform 0.2s ease;
 }
 
-.dark-mode .toggle-input:checked + .toggle-label {
+.dark-mode .toggle-input:checked+.toggle-label {
   background-color: var(--text-color);
 }
 
-.dark-mode .toggle-input:checked + .toggle-label .toggle-slider {
+.dark-mode .toggle-input:checked+.toggle-label .toggle-slider {
   transform: translateX(20px);
   background-color: var(--bg-color);
 }
@@ -187,7 +187,7 @@ p.intro {
 
 /* Layout */
 .content-wrapper,
-header > div {
+header>div {
   max-width: var(--content-max-width);
   margin-left: auto;
   margin-right: auto;
@@ -196,8 +196,9 @@ header > div {
 }
 
 @media (min-width: 1076px) {
+
   body.has-toc .content-wrapper,
-  body.has-toc header > div {
+  body.has-toc header>div {
     max-width: var(--content-max-width);
     padding-left: 20px;
     padding-right: 20px;
@@ -219,12 +220,13 @@ header {
   transition: background-color 0.2s;
 }
 
-header > div {
+header>div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  min-height: 44px; /* Add this */
+  min-height: 44px;
+  /* Add this */
 }
 
 header h1,
@@ -237,7 +239,6 @@ header h1 a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 250px;
   padding-top: 2px;
 }
 
@@ -309,11 +310,11 @@ html.js-loaded .header-controls {
   border-radius: 50%;
 }
 
-.toggle-input:checked + .toggle-label {
+.toggle-input:checked+.toggle-label {
   background-color: var(--text-color);
 }
 
-.toggle-input:checked + .toggle-label .toggle-slider {
+.toggle-input:checked+.toggle-label .toggle-slider {
   transform: translateX(20px);
   background-color: var(--bg-color);
 }
@@ -410,6 +411,7 @@ center {
 hr {
   border: none;
 }
+
 hr:after {
   content: "\2042";
   display: block;
@@ -421,8 +423,9 @@ hr:after {
 }
 
 @media (min-width: 1400px) {
+
   .content-wrapper,
-  header > div {
+  header>div {
     max-width: var(--content-max-width);
   }
 }
