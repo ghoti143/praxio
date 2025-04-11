@@ -6,64 +6,46 @@
   <title>Praxio - Coming Soon</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800">
+  <div class="min-h-screen flex flex-col items-center justify-center px-4">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Praxio</h1>
+      <p class="text-xl mb-8">A new way to practice, build, and grow. Launching soon!</p>
 
-  <!-- Header -->
-  <header class="bg-white shadow p-6 flex justify-between items-center">
-    <h1 class="text-3xl font-bold text-indigo-600">Praxio</h1>
-    <a href="https://github.com/ghoti143/praxio" target="_blank" class="text-indigo-500 hover:underline text-sm">
-      GitHub
-    </a>
-  </header>
+      <!-- Fake screenshots -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <div class="w-64 h-128 bg-gray-200 flex items-center justify-center">Screenshot 1</div>
+        <div class="w-64 h-128 bg-gray-200 flex items-center justify-center">Screenshot 2</div>
+        <div class="w-64 h-128 bg-gray-200 flex items-center justify-center">Screenshot 3</div>
+      </div>
 
-  <!-- Hero Section -->
-  <section class="flex-1 flex flex-col items-center justify-center p-8 text-center">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4">Building in Public 🚀</h2>
-    <p class="text-lg text-gray-600 mb-8">
-      We're building Praxio — a smarter way to manage your workflow. Join us early!
-    </p>
+      <!-- Email signup form -->
+      <form class="mb-8" action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="email" name="email" required placeholder="Enter your email"
+          class="px-4 py-2 border rounded-l-md focus:outline-none">
+        <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700">
+          Notify Me
+        </button>
+      </form>
 
-    <!-- Fake screenshots -->
-    <div class="flex flex-wrap justify-center gap-4 mb-8">
-      <div class="w-60 h-40 bg-gray-300 rounded shadow-inner flex items-center justify-center">
-        <span class="text-gray-500">Screenshot 1</span>
+      <!-- App store badges -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <a href="#" target="_blank">
+          <img src="https://developer.apple.com/news/images/download-on-the-app-store-badge.png" alt="Download on the App Store" class="h-12">
+        </a>
+        <a href="#" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12">
+        </a>
       </div>
-      <div class="w-60 h-40 bg-gray-300 rounded shadow-inner flex items-center justify-center">
-        <span class="text-gray-500">Screenshot 2</span>
-      </div>
-      <div class="w-60 h-40 bg-gray-300 rounded shadow-inner flex items-center justify-center">
-        <span class="text-gray-500">Screenshot 3</span>
-      </div>
+
+      <!-- GitHub link -->
+      <p class="mb-4">
+        <a href="https://github.com/ghoti143/praxio" target="_blank" class="text-blue-600 hover:underline">
+          See how we’re building Praxio in public on GitHub 🚀
+        </a>
+      </p>
+
     </div>
-
-    <!-- Email signup form -->
-    <form action="#" method="POST" class="w-full max-w-md bg-white p-6 rounded shadow">
-      <h3 class="text-2xl font-semibold mb-4">Get Notified</h3>
-      <input type="email" name="email" placeholder="Your email address" required
-             class="w-full p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-400">
-      <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white p-3 rounded font-semibold">
-        Notify Me
-      </button>
-    </form>
-
-    <!-- App store badges -->
-    <div class="flex justify-center items-center gap-6 mt-8">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29_SVG.svg" alt="Download on the App Store" class="h-12">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12">
-    </div>
-
-    <p class="text-sm text-gray-500 mt-6">
-      Follow our journey and contribute on 
-      <a href="https://github.com/ghoti143/praxio" target="_blank" class="text-indigo-500 hover:underline">
-        GitHub
-      </a>.
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center text-gray-400 text-xs p-4">
-    © 2025 Praxio. All rights reserved.
-  </footer>
-
+  </div>
 </body>
 </html>
