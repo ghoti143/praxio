@@ -1,3 +1,10 @@
+# Hugo build output
+/public/
+/resources/_gen/
+
+# Build artifacts
+hugo_stats.json
+
 # Logs
 logs
 *.log
