@@ -6,6 +6,9 @@ on:
       channel_id:
         required: true
         type: string
+    secrets:
+      FIREBASE_SERVICE_ACCOUNT:
+        required: true
 
 jobs:
   build_and_prepare:
