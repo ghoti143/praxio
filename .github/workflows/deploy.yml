@@ -29,13 +29,13 @@ jobs:
       - name: Prepare files for deployment
         run: |
           # Create the directory where we'll merge the blog and landing build
-          mkdir -p build/public/blog
+          mkdir -p staging/blog
 
           # Copy landing page files (Assumes landing page is already ready in the landing folder)
-          cp -r landing/* build/public/
+          cp -r landing/* staging
 
           # Copy blog files to the /blog path
-          cp -r blog/public/* build/public/blog/
+          cp -r blog/public/* staging/blog/
         
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
