@@ -23,6 +23,17 @@ jobs:
           cd blog
           hugo --minify
 
+      - name: Prepare files for deployment
+        run: |
+          # Create the directory where we'll merge the blog and landing build
+          mkdir -p firebase-public/blog
+          
+          # Copy landing page files (Assumes landing page is already ready in the landing folder)
+          cp -r landing/* firebase-public/
+          
+          # Copy blog files to the /blog path
+          cp -r blog/public/* firebase-public/blog/
+
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -30,4 +41,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRAXIO_APP }}'
           channelId: live
           projectId: praxio-app
-          entryPoint: ./blog  # <<-- Tell it that firebase.json is inside /blog
+          public: firebase-public

@@ -1,16 +1,16 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "landing",
+    "rewrites": [
+      {
+        "source": "/blog/**",
+        "destination": "/blog/index.html"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "/blog/**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
