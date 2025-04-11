@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Praxio - Coming Soon</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5MV1RT9FB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-G5MV1RT9FB');
+  </script>
 </head>
+
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
   <!-- Hero Section -->
@@ -32,10 +43,12 @@
     <!-- App store badges -->
     <div class="flex justify-center items-center gap-4 mb-8">
       <a href="https://www.apple.com/app-store/" target="_blank">
-        <img src="https://developer.apple.com/news/images/download-on-the-app-store-badge.png" alt="Download on the App Store" class="h-12">
+        <img src="https://developer.apple.com/news/images/download-on-the-app-store-badge.png"
+          alt="Download on the App Store" class="h-12">
       </a>
       <a href="https://play.google.com/store" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+          alt="Get it on Google Play" class="h-12">
       </a>
     </div>
 
@@ -43,7 +56,7 @@
     <form action="#" method="POST" class="w-full max-w-md bg-white p-6 mb-8 rounded shadow">
       <h3 class="text-2xl font-semibold mb-4">Get Notified</h3>
       <input type="email" name="email" placeholder="Your email address" required
-             class="w-full p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+        class="w-full p-3 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-400">
       <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white p-3 rounded font-semibold">
         Notify Me
       </button>
@@ -68,4 +81,5 @@
   </script>
 
 </body>
+
 </html>
