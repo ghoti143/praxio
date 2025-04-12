@@ -236,9 +236,6 @@ header h1 a {
   font-size: 1.2em;
   line-height: 44px;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   padding-top: 2px;
 }
 
