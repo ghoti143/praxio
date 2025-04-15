@@ -100,7 +100,7 @@
       try {
         await addDoc(collection(db, "prelaunch-signups"), {
           email,
-          timestamp: Date.now()
+          timestamp: new Date()
         });
     
         // Replace form with success message
