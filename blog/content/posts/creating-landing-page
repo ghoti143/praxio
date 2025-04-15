@@ -7,3 +7,4 @@ title = 'Creating the Landing Page'
 * got the gh actions setup so that i could build the blog and deploy the blog and landing page at the same time to the same firebase host
 * got the email form wired up to firestore.  chatgpt walked me through how to do this in a secure manner.
 * chatgpt created the fake screenshots.  i asked gemini to do the same but chatgpt was better.
+* told me about open graph and created an open graph image for me
