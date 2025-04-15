@@ -1,0 +1,8 @@
++++
+date = '2025-04-15T14:11:00-04:00'
+title = 'Creating the Landing Page'
++++
+
+* create landing page with help of chatgpt.  it recommended tailwind.  this is nice. i've been wanting to learn tailwind.
+* got the gh actions setup so that i could build the blog and deploy the blog and landing page at the same time to the same firebase host
+* got the email form wired up to firestore.  chatgpt walked me through how to do this in a secure manner.
