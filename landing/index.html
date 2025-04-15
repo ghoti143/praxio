@@ -91,19 +91,34 @@
     const db = getFirestore(app);
 
     // Handle form submission
-    const form = document.getElementById('email-form');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const formData = new FormData(e.target);
       const email = formData.get('email');
-  
+    
       try {
-        await addDoc(collection(db, "signups"), { email, timestamp: new Date() });
-        alert("Thanks! You're on the list.");
-        form.reset();
+        await addDoc(collection(db, "signups"), {
+          email,
+          timestamp: new Date()
+        });
+    
+        // Replace form with success message
+        const successMsg = document.createElement('div');
+        successMsg.className = 'bg-green-100 text-green-800 p-6 rounded shadow';
+        successMsg.innerHTML = `
+          <h3 class="text-2xl font-semibold mb-2">You're on the list! 🎉</h3>
+          <p>We'll let you know when Praxio is ready.</p>
+        `;
+    
+        form.replaceWith(successMsg);
+    
       } catch (error) {
         console.error("Error adding document: ", error);
-        alert("Something went wrong. Try again later.");
+        // Optional: show error in-page
+        const errorMsg = document.createElement('p');
+        errorMsg.className = 'text-red-600 mt-2';
+        errorMsg.textContent = "Something went wrong. Please try again later.";
+        form.appendChild(errorMsg);
       }
     });
   </script>
