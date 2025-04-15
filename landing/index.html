@@ -98,7 +98,7 @@
       const email = formData.get('email');
     
       try {
-        await addDoc(collection(db, "signups"), {
+        await addDoc(collection(db, "prelaunch-signups"), {
           email,
           timestamp: new Date()
         });
