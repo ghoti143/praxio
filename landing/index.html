@@ -94,7 +94,8 @@
     const form = document.getElementById('email-form');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const email = document.getElementById('email').value;
+      const formData = new FormData(e.target);
+      const email = formData.get('email');
   
       try {
         await addDoc(collection(db, "signups"), { email, timestamp: new Date() });
