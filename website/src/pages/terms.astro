@@ -1,0 +1,126 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} subtitle="Terms of Service" description="Learn about the terms of our service." />
+
+    <style>
+      .policy-section {
+        margin-bottom: 2rem;
+      }
+
+      .policy-section h2 {
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .policy-section p,
+      .policy-section ul {
+        margin-bottom: 1rem;
+      }
+
+      .policy-section ul {
+        list-style-type: disc;
+        margin-left: 1.5rem;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen dark-mode-support">
+    <Header />
+
+    <main class="flex-1 py-8">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow dark-container">
+          <h1 class="text-2xl sm:text-3xl font-bold mb-6 text-center">Terms of Service</h1>
+          <p class="text-sm text-gray-500 mb-6 text-center">Last Updated: April 17, 2025</p>
+
+          <div class="space-y-8">
+            <div class="policy-section">
+              <h2 class="text-xl font-semibold dark-border">1. Acceptance of Terms</h2>
+              <p>
+                By accessing or using the Praxio app ("App") or website at praxio.app ("Website"), you agree to be bound by these Terms of Service ("Terms") and our Privacy Policy. If you do not agree to these Terms, do not use our services.
+              </p>
+            </div>
+
+            <div class="policy-section">
+              <h2 class="text-xl font-semibold dark-border">2. Use of the Service</h2>
+              <p>
+                You may use Praxio only for lawful purposes and in accordance with these Terms. You are responsible for your conduct and any data, text, or content you submit via the App or Website.
+              </p>
+            </div>
+
+            <div class="policy-section">
+              <h2 class="text-xl font-semibold dark-border">3. User Accounts</h2>
+              <p>
+                To access certain features, you may be required to create an account. You must provide accurate and complete information, and you are responsible for maintaining the confidentiality of your login credentials.
+              </p>
+            </div>
+
+            <div class="policy-section">
+              <h2 class="text-xl font-semibold dark-border">4. Intellectual Property</h2>
+              <p>
+                All content, trademarks, and data on the App and Website are the property of Praxio or its licensors. You may not use, copy, reproduce, or distribute any part of the service without prior written permission.
+              </p>
+            </div>
+
+            <div class="policy-section">
+              <h2 class="text-xl font-semibold dark-border">5. Termination</h2>
+              <p>
+                We may suspend or terminate your access to the App or Website at our sole discretion, without notice, for conduct that we believe violates these Terms or is harmful to other users or us.
+              </p>
+            </div>
+
+            <div class="policy-section">
+              <h2 class="text-xl font-semibold dark-border">6. Disclaimer of Warranties</h2>
+              <p>
+                Praxio is provided "as is" and "as available" without warranties of any kind. We do not guarantee that the service will be uninterrupted, error-free, or secure.
+              </p>
+            </div>
+
+            <div class="policy-section">
+              <h2 class="text-xl font-semibold dark-border">7. Limitation of Liability</h2>
+              <p>
+                To the fullest extent permitted by law, Praxio shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use or inability to use the service.
+              </p>
+            </div>
+
+            <div class="policy-section">
+              <h2 class="text-xl font-semibold dark-border">8. Modifications to the Terms</h2>
+              <p>
+                We may modify these Terms at any time. Changes will be posted on this page with a revised "Last Updated" date. Your continued use of the service after such changes constitutes acceptance of the new Terms.
+              </p>
+            </div>
+
+            <div class="policy-section">
+              <h2 class="text-xl font-semibold dark-border">9. Governing Law</h2>
+              <p>
+                These Terms are governed by and construed in accordance with the laws of the State of California, without regard to its conflict of laws principles.
+              </p>
+            </div>
+
+            <div class="policy-section">
+              <h2 class="text-xl font-semibold dark-border">10. Contact Us</h2>
+              <p>If you have any questions about these Terms, please contact us at:</p>
+              <p>Email: support@praxio.app</p>
+              <p>
+                Praxio<br />
+                123 Habit Street<br />
+                San Francisco, CA 94105<br />
+                United States
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>

@@ -1,267 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Praxio - The Intelligent Way to Build Better Habits"
+    />
+    <title>Praxio - The Intelligent Way to Build Better Habits</title>
+    <link rel="icon" href="/assets/favicon.png" type="image/png" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Praxio - The Intelligent Way to Build Better Habits. Join our waitlist today.">
-  <title>Praxio - The Intelligent Way to Build Better Habits</title>
-  <link rel="icon" href="/assets/favicon.png" type="image/png">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Praxio" />
+    <meta
+      property="og:description"
+      content="The Intelligent Way to Build Better Habits. 🧠"
+    />
+    <meta
+      property="og:image"
+      content="https://praxio.app/assets/open-graph.png"
+    />
+    <meta property="og:url" content="https://praxio.app" />
+    <meta property="og:type" content="website" />
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Praxio - Build Better Habits with AI">
-  <meta property="og:description" content="The Intelligent Way to Build Better Habits. 🧠 Join our waitlist today.">
-  <meta property="og:image" content="https://praxio.app/assets/open-graph.png">
-  <meta property="og:url" content="https://praxio.app">
-  <meta property="og:type" content="website">
-  
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Praxio - Build Better Habits with AI">
-  <meta name="twitter:description" content="The Intelligent Way to Build Better Habits. 🧠 Join our waitlist today.">
-  <meta name="twitter:image" content="https://praxio.app/assets/open-graph.png">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Praxio - Build Better Habits with AI" />
+    <meta
+      name="twitter:description"
+      content="The Intelligent Way to Build Better Habits. 🧠"
+    />
+    <meta
+      name="twitter:image"
+      content="https://praxio.app/assets/open-graph.png"
+    />
 
-  <!-- Preconnect to CDNs -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://www.gstatic.com">
-  
-  <!-- Preload important assets -->
-  <link rel="preload" href="assets/praxio-logo-trans.png" as="image">
-  
-  <!-- Stylesheets -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    /* Custom animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .fade-in {
-      animation: fadeIn 0.6s ease-out forwards;
-    }
-    
-    .fade-in-delay-1 {
-      opacity: 0;
-      animation: fadeIn 0.6s ease-out 0.2s forwards;
-    }
-    
-    .fade-in-delay-2 {
-      opacity: 0;
-      animation: fadeIn 0.6s ease-out 0.4s forwards;
-    }
-    
-    .fade-in-delay-3 {
-      opacity: 0;
-      animation: fadeIn 0.6s ease-out 0.6s forwards;
-    }
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.gstatic.com" />
 
-    /* Dark mode support */
-    @media (prefers-color-scheme: dark) {
-      .dark-mode-support {
-        background-color: #1a202c;
-        color: #e2e8f0;
+    <!-- Preload important assets -->
+    <link rel="preload" href="assets/praxio-logo-trans.png" as="image" />
+
+    <!-- Stylesheets -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
-      
-      .dark-form {
-        background-color: #2d3748;
-        color: #e2e8f0;
+
+      .fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
       }
-      
-      .dark-input {
-        background-color: #4a5568;
-        color: white;
-        border-color: #718096;
+
+      .fade-in-delay-1 {
+        opacity: 0;
+        animation: fadeIn 0.6s ease-out 0.2s forwards;
       }
-      
-      .dark-footer {
-        color: #a0aec0;
+
+      .fade-in-delay-2 {
+        opacity: 0;
+        animation: fadeIn 0.6s ease-out 0.4s forwards;
       }
-    }
-  </style>
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5MV1RT9FB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-G5MV1RT9FB');
-  </script>
-</head>
 
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen dark-mode-support">
+      .fade-in-delay-3 {
+        opacity: 0;
+        animation: fadeIn 0.6s ease-out 0.6s forwards;
+      }
 
-  <!-- Hero Section -->
-  <section class="flex-1 flex flex-col items-center justify-center p-4 sm:p-8 text-center">
-    <div class="flex justify-center mb-2 fade-in">
-      <img src="assets/praxio-logo-trans.png" alt="Praxio Logo" class="w-full max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl" loading="eager" />
-    </div>
-    <p class="text-lg md:text-xl text-gray-600 mb-8 fade-in-delay-1">
-      The Intelligent Way to Build Better Habits. 🧠
-    </p>
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        .dark-mode-support {
+          background-color: #1a202c;
+          color: #e2e8f0;
+        }
 
-    <!-- Screenshots with lazy loading -->
-    <div class="flex justify-center mb-8 fade-in-delay-1">
-      <img src="assets/praxio-screenshots.png" alt="Praxio App Screenshots" class="w-full max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl" loading="lazy" />
-    </div>
+        .dark-form {
+          background-color: #2d3748;
+          color: #e2e8f0;
+        }
 
-    <!-- App store badges -->
-    <div class="flex justify-center items-center gap-4 mb-8 fade-in-delay-2">
-      <a href="#" class="opacity-60 cursor-not-allowed" aria-label="App Store - Coming Soon">
-        <img src="https://developer.apple.com/news/images/download-on-the-app-store-badge.png"
-          alt="Download on the App Store - Coming Soon" class="h-10 sm:h-12" loading="lazy">
-      </a>
-      <a href="#" class="opacity-60 cursor-not-allowed" aria-label="Google Play - Coming Soon">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-          alt="Get it on Google Play - Coming Soon" class="h-10 sm:h-12" loading="lazy">
-      </a>
-    </div>
+        .dark-input {
+          background-color: #4a5568;
+          color: white;
+          border-color: #718096;
+        }
 
-    <!-- Email signup form -->
-    <form id="email-form" action="#" method="POST" class="w-full max-w-md bg-white p-6 mb-8 rounded shadow dark-form fade-in-delay-3">
-      <h3 class="text-xl sm:text-2xl font-semibold mb-4">Get Early Access</h3>
-      <div class="space-y-4">
-        <input type="email" name="email" placeholder="Your email address" required
-          class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400 dark-input"
-          aria-label="Email Address">
-        <button type="submit" 
-          class="w-full bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 text-white p-3 rounded font-semibold transition duration-150 ease-in-out">
-          Join the Waitlist
-        </button>
+        .dark-footer {
+          color: #a0aec0;
+        }
+      }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-G5MV1RT9FB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-G5MV1RT9FB");
+    </script>
+  </head>
+
+  <body
+    class="bg-gray-50 text-gray-800 flex flex-col min-h-screen dark-mode-support"
+  >
+    <!-- Hero Section -->
+    <section
+      class="flex-1 flex flex-col items-center justify-center p-4 sm:p-8 text-center"
+    >
+      <div class="flex justify-center mb-2 fade-in">
+        <img
+          src="assets/praxio-logo-trans.png"
+          alt="Praxio Logo"
+          class="w-full max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl"
+          loading="eager"
+        />
       </div>
-      <p class="text-sm mt-3 text-gray-500">We respect your privacy. No spam, ever.</p>
-    </form>
+      <p class="text-lg md:text-xl text-gray-600 mb-8 fade-in-delay-1">
+        The Intelligent Way to Build Better Habits. 🧠
+      </p>
 
-    <div class="mt-6 fade-in-delay-3">
-      <p class="text-gray-500">We are building in public. Come help us shape Praxio!</p>
-      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-lg mt-2">
-        <a href="/blog" class="text-blue-600 hover:text-blue-700 hover:underline">Read our blog</a>
-        <a href="https://github.com/ghoti143/praxio" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 hover:underline">
-          Contribute on GitHub
+      <!-- Screenshots with lazy loading -->
+      <div class="flex justify-center mb-8 fade-in-delay-1">
+        <img
+          src="assets/praxio-screenshots.png"
+          alt="Praxio App Screenshots"
+          class="w-full max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- App store badges -->
+      <div class="flex justify-center items-center gap-4 mb-8 fade-in-delay-2">
+        <a
+          href="#"
+          class="opacity-60 cursor-not-allowed"
+          aria-label="App Store - Coming Soon"
+        >
+          <img
+            src="https://developer.apple.com/news/images/download-on-the-app-store-badge.png"
+            alt="Download on the App Store - Coming Soon"
+            class="h-10 sm:h-12"
+            loading="lazy"
+          />
+        </a>
+        <a
+          href="#"
+          class="opacity-60 cursor-not-allowed"
+          aria-label="Google Play - Coming Soon"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+            alt="Get it on Google Play - Coming Soon"
+            class="h-10 sm:h-12"
+            loading="lazy"
+          />
         </a>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="text-center text-gray-400 text-xs p-4 dark-footer">
-    <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6">
-      <span>© 2025 Praxio. All rights reserved.</span>
-      <a href="/privacy" class="hover:text-gray-600 hover:underline">Privacy Policy</a>
-      <a href="/terms" class="hover:text-gray-600 hover:underline">Terms of Service</a>
-    </div>
-  </footer>
+      <!-- Email signup form -->
+      <form
+        id="email-form"
+        action="#"
+        method="POST"
+        class="w-full max-w-md bg-white p-6 mb-8 rounded shadow dark-form fade-in-delay-3"
+      >
+        <h3 class="text-xl sm:text-2xl font-semibold mb-4">Get Early Access</h3>
+        <div class="space-y-4">
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            required
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400 dark-input"
+            aria-label="Email Address"
+          />
+          <button
+            type="submit"
+            class="w-full bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 text-white p-3 rounded font-semibold transition duration-150 ease-in-out"
+          >
+            Join the Waitlist
+          </button>
+        </div>
+        <p class="text-sm mt-3 text-gray-500">
+          We respect your privacy. No spam, ever.
+        </p>
+      </form>
 
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyAqofS7upCItn9ODh21ItxROchMkoGs_sA",
-      authDomain: "praxio-app.firebaseapp.com",
-      projectId: "praxio-app",
-      storageBucket: "praxio-app.firebasestorage.app",
-      messagingSenderId: "762867774660",
-      appId: "1:762867774660:web:9bb2d512d5ac5e09bd8591",
-      measurementId: "G-5PTWLJ8LJ2"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
+      <div class="mt-6 fade-in-delay-3">
+        <p class="text-gray-500">
+          We are building in public. Come help us shape Praxio!
+        </p>
+        <div
+          class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-lg mt-2"
+        >
+          <a
+            href="/blog"
+            class="text-blue-600 hover:text-blue-700 hover:underline"
+            >Read our blog</a
+          >
+          <a
+            href="https://github.com/ghoti143/praxio"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-600 hover:text-blue-700 hover:underline"
+          >
+            Contribute on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
 
-    // Handle form submission
-    const form = document.getElementById('email-form');
-    
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const submitButton = form.querySelector('button[type="submit"]');
-      const originalButtonText = submitButton.textContent;
-      
-      // Disable button and show loading state
-      submitButton.disabled = true;
-      submitButton.textContent = 'Processing...';
-      
-      const formData = new FormData(e.target);
-      const email = formData.get('email').trim();
-      
-      // Email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        showMessage('Please enter a valid email address.', 'error');
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
-        return;
-      }
-    
-      try {
-        await addDoc(collection(db, "prelaunch-signups"), {
-          email,
-          timestamp: new Date(),
-          source: 'landing-page',
-          userAgent: navigator.userAgent
-        });
-    
-        // Show success message
-        showMessage('You\'re on the list! 🎉 We\'ll let you know when Praxio is ready.', 'success');
-        
-        // Reset form
-        form.reset();
-        
-      } catch (error) {
-        console.error("Error adding document: ", error);
-        showMessage('Something went wrong. Please try again later.', 'error');
-      } finally {
-        // Re-enable button
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
-      }
-    });
-    
-    function showMessage(message, type) {
-      // Remove any existing messages
-      const existingMsg = form.querySelector('.message');
-      if (existingMsg) {
-        existingMsg.remove();
-      }
-      
-      // Create message element
-      const msgElement = document.createElement('div');
-      msgElement.className = `message p-3 mt-4 rounded ${type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`;
-      msgElement.innerHTML = message;
-      
-      // Insert after button
-      form.appendChild(msgElement);
-      
-      // Auto-remove error messages after 5 seconds
-      if (type === 'error') {
-        setTimeout(() => {
-          msgElement.remove();
-        }, 5000);
-      }
-    }
-    
-    // Add accessibility keyboard support for the "cursor-not-allowed" app store links
-    document.querySelectorAll('.cursor-not-allowed').forEach(link => {
-      link.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          alert('Our app is coming soon! Join the waitlist to get notified when we launch.');
+    <!-- Footer -->
+    <footer class="text-center text-gray-400 text-xs p-4 dark-footer">
+      <div
+        class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6"
+      >
+        <span>© 2025 Praxio. All rights reserved.</span>
+        <a href="/privacy" class="hover:text-gray-600 hover:underline"
+          >Privacy Policy</a
+        >
+        <a href="/terms" class="hover:text-gray-600 hover:underline"
+          >Terms of Service</a
+        >
+      </div>
+    </footer>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+      } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAqofS7upCItn9ODh21ItxROchMkoGs_sA",
+        authDomain: "praxio-app.firebaseapp.com",
+        projectId: "praxio-app",
+        storageBucket: "praxio-app.firebasestorage.app",
+        messagingSenderId: "762867774660",
+        appId: "1:762867774660:web:9bb2d512d5ac5e09bd8591",
+        measurementId: "G-5PTWLJ8LJ2",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Handle form submission
+      const form = document.getElementById("email-form");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+
+        // Disable button and show loading state
+        submitButton.disabled = true;
+        submitButton.textContent = "Processing...";
+
+        const formData = new FormData(e.target);
+        const email = formData.get("email").trim();
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          showMessage("Please enter a valid email address.", "error");
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+          return;
+        }
+
+        try {
+          await addDoc(collection(db, "prelaunch-signups"), {
+            email,
+            timestamp: new Date(),
+            source: "landing-page",
+            userAgent: navigator.userAgent,
+          });
+
+          // Show success message
+          showMessage(
+            "You're on the list! 🎉 We'll let you know when Praxio is ready.",
+            "success"
+          );
+
+          // Reset form
+          form.reset();
+        } catch (error) {
+          console.error("Error adding document: ", error);
+          showMessage("Something went wrong. Please try again later.", "error");
+        } finally {
+          // Re-enable button
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
         }
       });
-      
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert('Our app is coming soon! Join the waitlist to get notified when we launch.');
-      });
-    });
-  </script>
-  
-</body>
 
+      function showMessage(message, type) {
+        // Remove any existing messages
+        const existingMsg = form.querySelector(".message");
+        if (existingMsg) {
+          existingMsg.remove();
+        }
+
+        // Create message element
+        const msgElement = document.createElement("div");
+        msgElement.className = `message p-3 mt-4 rounded ${
+          type === "success"
+            ? "bg-green-100 text-green-800"
+            : "bg-red-100 text-red-800"
+        }`;
+        msgElement.innerHTML = message;
+
+        // Insert after button
+        form.appendChild(msgElement);
+
+        // Auto-remove error messages after 5 seconds
+        if (type === "error") {
+          setTimeout(() => {
+            msgElement.remove();
+          }, 5000);
+        }
+      }
+
+      // Add accessibility keyboard support for the "cursor-not-allowed" app store links
+      document.querySelectorAll(".cursor-not-allowed").forEach((link) => {
+        link.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            alert(
+              "Our app is coming soon! Join the waitlist to get notified when we launch."
+            );
+          }
+        });
+
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          alert(
+            "Our app is coming soon! Join the waitlist to get notified when we launch."
+          );
+        });
+      });
+    </script>
+  </body>
 </html>
