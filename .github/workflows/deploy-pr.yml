@@ -1,4 +1,4 @@
-name: Deploy website to Firebase live channel on PR
+name: Deploy website to Firebase dedicated channel on PR
 
 on:
   pull_request:
