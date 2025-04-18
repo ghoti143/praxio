@@ -1,0 +1,46 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`${SITE_TITLE} - Development Journal`} description="The story of how Praxio came to be." />
+  </head>
+  <body class="bg-white text-black font-sans">
+    <Header />
+    <main class="max-w-screen-md mx-auto px-4 py-12">
+      <section>
+        <ul class="flex flex-wrap gap-8 md:gap-6 list-none p-0 m-0">
+          {
+            posts.map((post) => (
+              <li class="w-full md:w-[calc(50%-1rem)]">
+                <a
+                  href={`/blog/${post.id}/`}
+                  class="block hover:text-accent transition duration-200"
+                >
+                  <h4 class="font-bold text-xl leading-tight">
+                    {post.data.title}
+                  </h4>
+                  <p class="text-gray-500 mt-1">
+                    <FormattedDate date={post.data.pubDate} />
+                  </p>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

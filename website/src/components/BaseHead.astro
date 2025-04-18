@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+const { title, subtitle, description } = Astro.props;
+const fullTitle = subtitle ? `${title} - ${subtitle}` : title;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content={description} />
+<title>{fullTitle}</title>
+<link rel="icon" href="/favicon.png" type="image/png" />
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content="https://praxio.app/open-graph.png" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content="https://praxio.app/open-graph.png" />
+
+<!-- Preconnect to CDNs -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+
+<!-- Stylesheets -->
+<link
+  href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+  rel="stylesheet"
+/>
+
+<!-- Optional: Inline dark mode support -->
+<style>
+  @media (prefers-color-scheme: dark) {
+    .dark-mode-support {
+      background-color: #1a202c;
+      color: #e2e8f0;
+    }
+    .dark-header {
+      background-color: #2d3748;
+    }
+    .dark-container {
+      background-color: #2d3748;
+    }
+    .dark-footer {
+      color: #a0aec0;
+    }
+    .dark-border {
+      border-color: #4a5568;
+    }
+  }
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5MV1RT9FB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-G5MV1RT9FB');
+</script>
