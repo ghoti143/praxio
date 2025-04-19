@@ -6,6 +6,7 @@ import { SITE_DESCRIPTION } from '../consts';
 <Page subtitle="Welcome" description={SITE_DESCRIPTION}>
   <!-- Hero Section -->
   <section class="flex-1 flex flex-col items-center justify-center p-4 sm:p-8 text-center">
+    <!-- Logo -->
     <div class="flex justify-center mb-2 fade-in">
       <img
         src="praxio-logo-trans.png"
@@ -14,11 +15,13 @@ import { SITE_DESCRIPTION } from '../consts';
         loading="eager"
       />
     </div>
-    <p class="text-lg md:text-xl text-gray-600 mb-8 fade-in-delay-1">
+
+    <!-- Tagline -->
+    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 fade-in-delay-1">
       The Intelligent Way to Build Better Habits. 🧠
     </p>
 
-    <!-- Screenshots with lazy loading -->
+    <!-- Screenshots -->
     <div class="flex justify-center mb-8 fade-in-delay-1">
       <img
         src="praxio-screenshots.png"
@@ -53,16 +56,18 @@ import { SITE_DESCRIPTION } from '../consts';
       id="email-form"
       action="#"
       method="POST"
-      class="w-full max-w-md bg-white p-6 mb-8 rounded shadow dark-form fade-in-delay-3"
+      class="w-full max-w-md bg-white dark:bg-gray-800 p-6 mb-8 rounded shadow dark:shadow-lg fade-in-delay-3"
     >
-      <h3 class="text-xl sm:text-2xl font-semibold mb-4">Get Early Access</h3>
+      <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-800 dark:text-white">
+        Get Early Access
+      </h3>
       <div class="space-y-4">
         <input
           type="email"
           name="email"
           placeholder="Your email address"
           required
-          class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400 dark-input"
+          class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-900 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
           aria-label="Email Address"
         />
         <button
@@ -72,18 +77,28 @@ import { SITE_DESCRIPTION } from '../consts';
           Join the Waitlist
         </button>
       </div>
-      <p class="text-sm mt-3 text-gray-500">We respect your privacy. No spam, ever.</p>
+      <p class="text-sm mt-3 text-gray-500 dark:text-gray-400">
+        We respect your privacy. No spam, ever.
+      </p>
     </form>
 
+    <!-- Community Links -->
     <div class="mt-6 fade-in-delay-3">
-      <p class="text-gray-500">We are building in public. Come help us shape Praxio!</p>
+      <p class="text-gray-500 dark:text-gray-400">
+        We are building in public. Come help us shape Praxio!
+      </p>
       <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-lg mt-2">
-        <a href="/blog" class="text-blue-600 hover:text-blue-700 hover:underline">Read our blog</a>
+        <a
+          href="/blog"
+          class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 hover:underline"
+        >
+          Read our blog
+        </a>
         <a
           href="https://github.com/ghoti143/praxio"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-600 hover:text-blue-700 hover:underline"
+          class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 hover:underline"
         >
           Contribute on GitHub
         </a>

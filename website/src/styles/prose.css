@@ -14,3 +14,6 @@
 .prose ol {
   list-style-type: decimal;
 }
+.prose p {
+  margin-bottom: 2em;
+}
