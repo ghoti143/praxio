@@ -14,7 +14,10 @@ const posts = (await getCollection('blog')).sort(
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={`${SITE_TITLE} - Development Journal`} description="The story of how Praxio came to be." />
+    <BaseHead
+      title={`${SITE_TITLE} - Development Journal`}
+      description="The story of how Praxio came to be."
+    />
   </head>
   <body class="bg-white text-black font-sans">
     <Header />
@@ -28,9 +31,7 @@ const posts = (await getCollection('blog')).sort(
                   href={`/blog/${post.id}/`}
                   class="block hover:text-accent transition duration-200"
                 >
-                  <h4 class="font-bold text-xl leading-tight">
-                    {post.data.title}
-                  </h4>
+                  <h4 class="font-bold text-xl leading-tight">{post.data.title}</h4>
                   <p class="text-gray-500 mt-1">
                     <FormattedDate date={post.data.pubDate} />
                   </p>
