@@ -1,5 +1,6 @@
 ---
 import Page from '../layouts/Page.astro';
+import Waitlist from '../components/Waitlist.astro';
 import { SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -51,36 +52,7 @@ import { SITE_DESCRIPTION } from '../consts';
       </a>
     </div>
 
-    <!-- Email signup form -->
-    <form
-      id="email-form"
-      action="#"
-      method="POST"
-      class="w-full max-w-md bg-white dark:bg-gray-800 p-6 mb-8 rounded shadow dark:shadow-lg fade-in-delay-3"
-    >
-      <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-800 dark:text-white">
-        Get Early Access
-      </h3>
-      <div class="space-y-4">
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email address"
-          required
-          class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-900 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          aria-label="Email Address"
-        />
-        <button
-          type="submit"
-          class="w-full bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 text-white p-3 rounded font-semibold transition duration-150 ease-in-out"
-        >
-          Join the Waitlist
-        </button>
-      </div>
-      <p class="text-sm mt-3 text-gray-500 dark:text-gray-400">
-        We respect your privacy. No spam, ever.
-      </p>
-    </form>
+    <Waitlist />
 
     <!-- Community Links -->
     <div class="mt-6 fade-in-delay-3">
@@ -107,102 +79,6 @@ import { SITE_DESCRIPTION } from '../consts';
   </section>
 
   <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js';
-    import {
-      getFirestore,
-      collection,
-      addDoc,
-    } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: 'AIzaSyAqofS7upCItn9ODh21ItxROchMkoGs_sA',
-      authDomain: 'praxio-app.firebaseapp.com',
-      projectId: 'praxio-app',
-      storageBucket: 'praxio-app.firebasestorage.app',
-      messagingSenderId: '762867774660',
-      appId: '1:762867774660:web:9bb2d512d5ac5e09bd8591',
-      measurementId: 'G-5PTWLJ8LJ2',
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-
-    // Handle form submission
-    const form = document.getElementById('email-form');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const submitButton = form.querySelector('button[type="submit"]');
-      const originalButtonText = submitButton.textContent;
-
-      // Disable button and show loading state
-      submitButton.disabled = true;
-      submitButton.textContent = 'Processing...';
-
-      const formData = new FormData(e.target);
-      const email = formData.get('email').trim();
-
-      // Email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        showMessage('Please enter a valid email address.', 'error');
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
-        return;
-      }
-
-      try {
-        await addDoc(collection(db, 'prelaunch-signups'), {
-          email,
-          timestamp: new Date(),
-          source: 'landing-page',
-          userAgent: navigator.userAgent,
-        });
-
-        // Show success message
-        showMessage("You're on the list! 🎉 We'll let you know when Praxio is ready.", 'success');
-
-        // Reset form
-        form.reset();
-      } catch (error) {
-        console.error('Error adding document: ', error);
-        showMessage('Something went wrong. Please try again later.', 'error');
-      } finally {
-        // Re-enable button
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
-      }
-    });
-
-    function showMessage(message, type) {
-      // Remove any existing messages
-      const existingMsg = form.querySelector('.message');
-      if (existingMsg) {
-        existingMsg.remove();
-      }
-
-      // Create message element
-      const msgElement = document.createElement('div');
-      msgElement.className = `message p-3 mt-4 rounded ${
-        type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-      }`;
-      msgElement.innerHTML = message;
-
-      // Insert after button
-      form.appendChild(msgElement);
-
-      // Auto-remove error messages after 5 seconds
-      if (type === 'error') {
-        setTimeout(() => {
-          msgElement.remove();
-        }, 5000);
-      }
-    }
-
     // Add accessibility keyboard support for the "cursor-not-allowed" app store links
     document.querySelectorAll('.cursor-not-allowed').forEach((link) => {
       link.addEventListener('keydown', (e) => {
