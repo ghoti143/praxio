@@ -86,8 +86,6 @@
       await addDoc(collection(db, 'prelaunch-signups'), {
         email,
         timestamp: new Date(),
-        source: 'landing-page',
-        userAgent: navigator.userAgent,
       });
 
       showMessage("You're on the list! 🎉 We'll let you know when Praxio is ready.", 'success');
