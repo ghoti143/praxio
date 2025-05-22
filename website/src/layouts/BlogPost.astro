@@ -6,15 +6,18 @@ import Page from './Page.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+const { title, description, author, pubDate, updatedDate } = Astro.props;
 ---
 
 <Page subtitle={title} description={description}>
   <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow dark:shadow-lg dark-container">
     <article class="max-w-3xl mx-auto">
-      <header class="mb-8 text-center">
+      <header class="mb-8 text-center">        
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {title}
+        </h1>
         <p class="text-sm text-gray-500 dark:text-gray-400">
-          <FormattedDate date={pubDate} />
+          Written by {author} on <FormattedDate date={pubDate} />
         </p>
         {
           updatedDate && (
@@ -23,9 +26,6 @@ const { title, description, pubDate, updatedDate } = Astro.props;
             </p>
           )
         }
-        <h1 class="mt-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-          {title}
-        </h1>
         <hr class="mt-4 border-gray-200 dark:border-gray-600" />
       </header>
 
